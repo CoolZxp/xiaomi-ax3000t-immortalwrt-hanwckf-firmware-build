@@ -1,7 +1,5 @@
 name: Build ImmortalWrt Firmware
 on:
-  schedule:
-    - cron: "0 0 20 * *"
   workflow_dispatch:
 
 
@@ -17,7 +15,7 @@ env:
 jobs:
   build:
     name: build-firmware
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     permissions:
       contents: write
